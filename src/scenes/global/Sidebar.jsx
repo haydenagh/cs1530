@@ -13,6 +13,7 @@ import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import SportsScoreIcon from '@mui/icons-material/SportsScore';
 import TrendingDownIcon from '@mui/icons-material/TrendingDown';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
+import LocalDiningIcon from '@mui/icons-material/LocalDining';
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
 
@@ -110,13 +111,7 @@ const Sidebar = () => {
           )}
 
           <Box paddingLeft={isCollapsed ? undefined : "10%"}>
-            <Item
-              title="Dashboard"
-              to="/"
-              icon={<HomeOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
+       
             <Item
               title="Start Session"
               to="/session"
@@ -153,15 +148,15 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
             <Item
-              title="Calendar"
-              to="/calendar"
-              icon={<CalendarTodayOutlinedIcon />}
+              title="Food"
+              to="/food"
+              icon={<LocalDiningIcon />}
               selected={selected}
               setSelected={setSelected}
             />
 
             <Item
-              title="Weight Goals"
+              title="Login"
               to="/weight"
               icon={<TrendingDownIcon />}
               selected={selected}

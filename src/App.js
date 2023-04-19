@@ -9,7 +9,7 @@ import Exercise from "./scenes/exercises";
 import Workout from "./scenes/workouts";
 import CreateWorkouts from "./scenes/createplan";
 import Goals from "./scenes/goals";
-import Calendar from "./scenes/calendar";
+import Food from "./scenes/food";
 import Weight from "./scenes/weight";
 import Session from "./scenes/session";
 
@@ -26,12 +26,13 @@ function App() {
           <main className="content">
             <Topbar setIsSidebar={setIsSidebar} />
             <Routes>
-              <Route path="/" element={<Dashboard />}/>
+              {/* <Route path="/" element={<Dashboard />}/> */}
+              <Route path="/" element={<Session />}/>
               <Route path="/exercises" element={<Exercise />}/>
               <Route path="/wplans" element={<Workout />}/>
               <Route path="/createwplan" element={<CreateWorkouts />}/>
               <Route path="/goals" element={<Goals />}/>
-              <Route path="/calendar" element={<Calendar />}/>
+              <Route path="/food" element={<Food />}/>
               <Route path="/weight" element={<Weight />}/>
               <Route path="/session" element={<Session />}/>
             </Routes>

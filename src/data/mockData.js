@@ -1,4 +1,16 @@
 import { tokens } from "../theme";
+export const testLogin = [
+  {
+    id: 1,
+    user: 'admin',
+    pass: 'pass'
+  },
+  {
+    id: 1,
+    user: 'admin4',
+    pass: 'pass42'
+  }
+]
 export const dataExercises = [
   {
     id: 1,

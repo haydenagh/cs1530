@@ -11,7 +11,7 @@ import { useState } from "react";
     const handleWorkoutNameChange = (event) => {
       setWorkoutName(event.target.value);
     };
-  
+    
     const handleExerciseSelect = (event) => {
       const exerciseId = Number(event.target.value);
       const exercise = dataExercises.find((e) => e.id === exerciseId);
