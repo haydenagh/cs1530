@@ -157,7 +157,7 @@ const Sidebar = () => {
 
             <Item
               title="Login"
-              to="/weight"
+              to="/login"
               icon={<TrendingDownIcon />}
               selected={selected}
               setSelected={setSelected}
