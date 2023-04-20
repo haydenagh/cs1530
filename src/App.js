@@ -12,6 +12,7 @@ import Food from "./scenes/food";
 import Login from "./scenes/login";
 import Session from "./scenes/session";
 import CreateAccount from "./scenes/account";
+import { LogProvider } from './LogContext';
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -25,18 +26,20 @@ function App() {
           <Sidebar isSidebar={isSidebar} />
           <main className="content">
             <Topbar setIsSidebar={setIsSidebar} />
-            <Routes>
-              {/* <Route path="/" element={<Dashboard />}/> */}
-              <Route path="/" element={<Session />}/>
-              <Route path="/exercises" element={<Exercise />}/>
-              <Route path="/wplans" element={<Workout />}/>
-              <Route path="/createwplan" element={<CreateWorkouts />}/>
-              <Route path="/goals" element={<Goals />}/>
-              <Route path="/food" element={<Food />}/>
-              <Route path="/login" element={<Login />}/>
-              <Route path="/session" element={<Session />}/>
-              <Route path="/account" element={<CreateAccount />}/>
-            </Routes>
+            <LogProvider> {/* Add LogProvider here */}
+              <Routes>
+                {/* <Route path="/" element={<Dashboard />}/> */}
+                <Route path="/" element={<Session />}/>
+                <Route path="/exercises" element={<Exercise />}/>
+                <Route path="/wplans" element={<Workout />}/>
+                <Route path="/createwplan" element={<CreateWorkouts />}/>
+                <Route path="/goals" element={<Goals />}/>
+                <Route path="/food" element={<Food />}/>
+                <Route path="/login" element={<Login />}/>
+                <Route path="/session" element={<Session />}/>
+                <Route path="/account" element={<CreateAccount />}/>
+              </Routes>
+            </LogProvider>
           </main>
         </div>
       </ThemeProvider>
