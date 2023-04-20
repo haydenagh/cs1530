@@ -24,6 +24,7 @@ import { useState } from "react";
     const handleSubmit = (event) => {
       event.preventDefault();
       // Do something with workoutName and selectedExercises
+      alert(`Workout "${workoutName}" created!`);
     };
   
     return (
