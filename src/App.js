@@ -26,9 +26,8 @@ function App() {
           <Sidebar isSidebar={isSidebar} />
           <main className="content">
             <Topbar setIsSidebar={setIsSidebar} />
-            <LogProvider> {/* Add LogProvider here */}
-              <Routes>
-                {/* <Route path="/" element={<Dashboard />}/> */}
+            <LogProvider> 
+              <Routes>=
                 <Route path="/" element={<Session />}/>
                 <Route path="/exercises" element={<Exercise />}/>
                 <Route path="/wplans" element={<Workout />}/>

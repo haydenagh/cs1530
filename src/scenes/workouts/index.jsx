@@ -9,7 +9,7 @@ const Workout = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const columns = [
-
+    // Creates Table
     {
       field: "name",
       headerName: "Exercise",
@@ -35,7 +35,7 @@ const Workout = () => {
 
   const [selectedPlan, setSelectedPlan] = useState(workoutPlans[0]);
 
-  const handlePlanChange = (event) => {
+  const handlePlanChange = (event) => { // Change this to DB data
     setSelectedPlan(
       workoutPlans.find((plan) => plan.name === event.target.value)
     );
@@ -44,6 +44,7 @@ const Workout = () => {
   return (
     <Box m="20px">
       <Header title="WORKOUT PLANS" subtitle="Check out your plans!!" />
+
       <Box
         m="40px 0 0 0"
         height="75vh"
@@ -72,7 +73,7 @@ const Workout = () => {
             color: `${colors.greenAccent[200]} !important`,
           },
         }}
-      >
+      > {/* Select which workout plan you want */}
         <Box display="flex" justifyContent="space-between" mb="20px">
           <Typography variant="h6" color="textPrimary">
             Select a Workout Plan:

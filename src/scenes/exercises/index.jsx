@@ -1,15 +1,13 @@
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, useTheme } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
 import { dataExercises } from "../../data/mockData";
-import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
-import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
-import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
 import Header from "../../components/Header";
 
 const Exercise = () => {
   const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
+  const colors = tokens(theme.palette.mode); // Gathers tokens from theme.js
+  // Sets Exercise Table
   const columns = [
     { field: "id", headerName: "ID" },
     {
@@ -56,7 +54,8 @@ const Exercise = () => {
             color: `${colors.greenAccent[200]} !important`,
           },
         }}
-      >
+      > {/* Gets data from mockData.js
+            Change to DB data        */}
         <DataGrid checkboxSelection rows={dataExercises} columns={columns} />
       </Box>
     </Box>

@@ -15,10 +15,8 @@ import { useState } from "react";
     const handleExerciseSelect = (event) => {
       const exerciseId = Number(event.target.value);
       const exercise = dataExercises.find((e) => e.id === exerciseId);
-      setSelectedExercises((prevSelectedExercises) => [
-        ...prevSelectedExercises,
-        exercise,
-      ]);
+      setSelectedExercises((prevSelectedExercises) => [...prevSelectedExercises,exercise,
+]);
     };
   
     const handleSubmit = (event) => {

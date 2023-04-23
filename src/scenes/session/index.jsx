@@ -8,16 +8,16 @@ const Session = () => {
   const [selectedWorkout, setSelectedWorkout] = useState(workoutPlans[0]);
   const [workoutLog, setWorkoutLog] = useState([]);
 
-  const handleWorkoutChange = (event) => {
+  const handleWorkoutChange = (event) => { // Change this data to DB data, which includes created workouts 
     setSelectedWorkout(workoutPlans.find((plan) => plan.id === event.target.value));
     setWorkoutLog([]);
   };
 
   const handleLogWorkout = () => {
     setWorkoutLog(selectedWorkout.exercises.map((exercise) => {
-      const sets = document.getElementById(`sets-${exercise.id}`).value;
-      const reps = document.getElementById(`reps-${exercise.id}`).value;
-      const weight = document.getElementById(`weight-${exercise.id}`).value;
+      const sets = document.getElementById(`sets-${exercise.id}`).value; // Retrieves sets from mockData.js
+      const reps = document.getElementById(`reps-${exercise.id}`).value; // Retrieves reps
+      const weight = document.getElementById(`weight-${exercise.id}`).value; // Retrieves weight
       return { name: exercise.name, sets, reps, weight };
     }));
   };return (

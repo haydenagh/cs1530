@@ -4,9 +4,7 @@ import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 import "react-pro-sidebar/dist/css/styles.css";
 import { tokens } from "../../theme";
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
-import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
@@ -87,7 +85,7 @@ const Sidebar = () => {
               </Box>
             )}
           </MenuItem>
-
+    
           {!isCollapsed && (
             <Box mb="25px">
               <Box display="flex" justifyContent="center" alignItems="center">
@@ -112,6 +110,7 @@ const Sidebar = () => {
 
           <Box paddingLeft={isCollapsed ? undefined : "10%"}>
        
+            {/* SIDEBAR LINKS */}
             <Item
               title="Start Session"
               to="/session"

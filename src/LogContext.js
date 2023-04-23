@@ -1,4 +1,6 @@
 // LogContext.js
+// Keeps local storage loaded when switching pages!
+// This page is magical
 import { createContext, useState, useEffect } from 'react';
 
 export const LogContext = createContext();
