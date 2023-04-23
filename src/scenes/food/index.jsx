@@ -59,6 +59,8 @@ const Food = () => {
         <form onSubmit={handleFormSubmit}>
           <Box display="flex" flexDirection="column" alignItems="center" mb={2}>
             <Typography variant="h5">Add Food</Typography>
+
+            {/* Meal Type */}
             <TextField
               label="Meal Type"
               variant="outlined"
@@ -66,6 +68,7 @@ const Food = () => {
               value={mealType}
               onChange={handleMealTypeChange}
             />
+            {/* Protein */}
             <TextField
               label="Protein (g)"
               variant="outlined"
@@ -74,6 +77,7 @@ const Food = () => {
               value={protein}
               onChange={handleProteinChange}
             />
+            {/* Carbs */}
             <TextField
               label="Carbs (g)"
               variant="outlined"
@@ -82,6 +86,7 @@ const Food = () => {
               value={carbs}
               onChange={handleCarbsChange}
             />
+            {/* Fats */}
             <TextField
               label="Fats (g)"
               variant="outlined"
@@ -97,6 +102,7 @@ const Food = () => {
         </form>
         {foodLogs.length > 0 ? (
           <Box mb={2}>
+            {/* Table Outline */}
             <Table>
               <TableHead>
                 <TableRow>
@@ -108,6 +114,7 @@ const Food = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
+                {/* "Logs" food */}
                 {foodLogs.map((log, index) => (
                   <TableRow key={index}>
                     <TableCell>{log.mealType}</TableCell>
@@ -117,6 +124,7 @@ const Food = () => {
                     <TableCell>{log.calories}</TableCell>
                   </TableRow>
                 ))}
+                {/* Calculates total */}
                 <TableRow>
                   <TableCell>Total</TableCell>
                   <TableCell>{macros.protein}</TableCell>
@@ -127,11 +135,11 @@ const Food = () => {
               </TableBody>
             </Table>
           </Box>
-        ) : (
-          <Typography>No food logs yet.</Typography>
+        ) : ( 
+          <Typography>No food logs yet.</Typography> /* If no food logs, this will display */
         )}
       </div>
     </Box>
   );
-        }
-        export default Food;
+}
+export default Food;
